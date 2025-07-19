@@ -36,3 +36,7 @@ WHERE city = 'Chennai' AND cancelled = FALSE
 AND ride_date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) 
 GROUP BY customer_id, customer_name 
 HAVING COUNT(*) >= 50; 
+
+
+July 18 2025
+installed MySQL Latest version for ETL  
