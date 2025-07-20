@@ -1,2 +1,1 @@
-use jdbcdemo;
-select * FROM  employee;
+busresv
