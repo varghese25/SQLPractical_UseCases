@@ -1,0 +1,30 @@
+<mxfile host="65bd71144e">
+    <diagram id="l_SFhMCVJfiKBtViGjdG" name="Page-1">
+        <mxGraphModel dx="727" dy="361" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="11" style="edgeStyle=none;html=1;" edge="1" parent="1" source="3" target="12">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="235" y="270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="&lt;div style=&quot;color: rgb(169, 183, 198);&quot;&gt;&lt;pre style=&quot;font-size: 9.8pt;&quot;&gt;&lt;span style=&quot;color: rgb(128, 128, 128); background-color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;&quot; face=&quot;Verdana&quot;&gt;data_load_faker.py&lt;br&gt;loaded 1000 Fake records&lt;/font&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="120" y="140" width="210" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=none;html=1;" edge="1" parent="1" source="6" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="MySql &amp;amp; Python connection" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="165" y="10" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="DataBase&lt;br&gt;test&lt;br&gt;Orders table" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+                    <mxGeometry x="195" y="310" width="60" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;div style=&quot;background-color:#2b2b2b;color:#a9b7c6&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;&lt;span style=&quot;color:#808080;&quot;&gt;# using data_load_faker.py load 1000 records&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;# database name is test&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;# table name is orders&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;# Why is SELECT * slower than selecting specific columns — even with an index?&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;#&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;# We dive into:&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;# How MySQL indexes work (B-Tree explained)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;# Why SELECT * often skips index optimizations&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;# What &quot;Using index&quot; means in EXPLAIN&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;# Why &lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;Courier New&#39;,monospace;&quot;&gt;𝐒𝐄𝐋𝐄𝐂𝐓&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt; * Can Slow You Down! |&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;Courier New&#39;,monospace;&quot;&gt;𝐈𝐧𝐝𝐞𝐱 𝐯𝐬 𝐂𝐨𝐥𝐮𝐦𝐧&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt; Explained&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="80" width="370" height="210" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
