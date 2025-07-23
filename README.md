@@ -40,3 +40,7 @@ HAVING COUNT(*) >= 50;
 
 July 18 2025
 installed MySQL Latest version for ETL  
+
+
+July 23 2025
+Leard About Spark & Hadoop arcticture 
