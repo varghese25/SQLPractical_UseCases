@@ -45,5 +45,8 @@ installed MySQL Latest version for ETL
 July 23 2025
 Leard About Spark & Hadoop arcticture 
 
-July 28 2026
-Learn about Hive
+July 28 2025
+Learn about Hive & Grandmother expired on this Day
+
+July 29 2025
+Learn about DDL & went house viewing (Signet)
