@@ -50,3 +50,12 @@ Learn about Hive & Grandmother expired on this Day
 
 July 29 2025
 Learn about DDL & went house viewing (Signet)
+
+July 30 2025
+Learn about 
+SQL Hosting
+If you want your web site to be able to store and retrieve data from a database, your web server should have access to a database-system that uses the SQL language.
+
+If your web server is hosted by an Internet Service Provider (ISP), you will have to look for SQL hosting plans.
+
+The most common SQL hosting databases are MS SQL Server, Oracle, MySQL, and MS Access.
