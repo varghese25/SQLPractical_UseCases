@@ -174,3 +174,8 @@ To insert a new record into the "Persons" table, we will NOT have to specify a v
 INSERT INTO Persons (FirstName,LastName)
 VALUES ('Lars','Monsen');
 The SQL statement above would insert a new record into the "Persons" table. The "Personid" column would be assigned a unique value. The "FirstName" column would be set to "Lars" and the "LastName" column would be set to "Monsen".
+
+
+Aug 6 2025
+
+VPS document 
