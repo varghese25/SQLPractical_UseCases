@@ -179,3 +179,75 @@ The SQL statement above would insert a new record into the "Persons" table. The 
 Aug 6 2025
 
 VPS document 
+
+Aug 7 2025
+Ip & Network
+To configure a public IP for your system so you can host your ERP, you’ll need to go through three main steps:
+
+1. Get a public IP from your ISP or hosting provider
+
+2. Configure it on your system
+
+3. Make it accessible from the internet (firewall, router, and DNS setup)
+
+## For Windows
+Go to Control Panel → Network and Sharing Center → Change adapter settings
+
+Right-click your network adapter → Properties
+
+Select Internet Protocol Version 4 (TCP/IPv4) → Properties
+
+Set your public IP, subnet mask, default gateway, and DNS manually.
+
+Save and restart networking.
+
+
+
+## Make It Accessible
+Even if you set a public IP, it won’t be reachable unless you open the right paths.
+
+a. Router/Firewall Port Forwarding
+If your ERP runs on port 8080 or 80/443:
+
+Forward that port from your router to your system’s local IP.
+
+On most routers: Login → Port Forwarding → Add Rule
+
+External Port: 80 (or your ERP port)
+
+Internal IP: Your machine’s LAN IP
+
+Internal Port: Same as ERP port
+
+
+## On Windows:
+Open Windows Defender Firewall → Advanced Settings → Inbound Rules
+
+Add a rule for your ERP port.
+
+## c. Test Accessibility
+From an external network (mobile data, not WiFi), open:
+
+http://<YOUR_PUBLIC_IP>:<PORT>
+If you see your ERP login page, it’s working.
+
+
+## Optional – Use a Domain Name
+Instead of typing your public IP, register a domain and point it to your IP using an A record in your DNS settings.
+
+Example:
+
+Domain: myerpcompany.com
+
+A Record → Points to your static public IP.
+
+##  Security Note:
+ERP systems usually store sensitive data. If you expose it to the public internet:
+
+Always use HTTPS (SSL certificate – can use Let’s Encrypt for free).
+
+Configure strong authentication.
+
+Keep software up to date.
+
+Consider reverse proxying through NGINX for extra protection.
