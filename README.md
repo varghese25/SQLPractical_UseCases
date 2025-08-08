@@ -1,49 +1,43 @@
 # ETL - Extract Transform Load (Unstructured Files like video, PDF , etc)
+
 # ELT - Extract Load Transform (Structured Files)
- 
-#Data Lake, Where Unstructured Files stored 
+
+#Data Lake, Where Unstructured Files stored
 #Data warehouse, Where structured files stored
 
 #OLTP Online Transaction Processing (Data Engineer, ETL)
 #OLAP Online Analytics Processing (Data Sciencentis Work)
 
-
-#Aggreation 
+#Aggreation
 #Normalization
 
-
-
-CREATE TABLE uber_rides ( 
-ride_id INT PRIMARY KEY, 
-customer_id INT, 
-customer_name VARCHAR(50), 
-city VARCHAR(50), 
-ride_date DATE, 
-cancelled BOOLEAN 
-); 
-INSERT INTO uber_rides VALUES 
-(1, 201, 'Mani', 'Chennai', '2025-04-01', FALSE), 
-(2, 201, 'Mani', 'Chennai', '2025-04-02', FALSE), -- (add 48 more rows for Mani) 
-(51, 202, 'Ravi', 'Chennai', '2025-04-01', FALSE), 
-(52, 202, 'Ravi', 'Chennai', '2025-04-02', TRUE), -- (add additional data for variety) 
+CREATE TABLE uber_rides (
+ride_id INT PRIMARY KEY,
+customer_id INT,
+customer_name VARCHAR(50),
+city VARCHAR(50),
+ride_date DATE,
+cancelled BOOLEAN
+);
+INSERT INTO uber_rides VALUES
+(1, 201, 'Mani', 'Chennai', '2025-04-01', FALSE),
+(2, 201, 'Mani', 'Chennai', '2025-04-02', FALSE), -- (add 48 more rows for Mani)
+(51, 202, 'Ravi', 'Chennai', '2025-04-01', FALSE),
+(52, 202, 'Ravi', 'Chennai', '2025-04-02', TRUE), -- (add additional data for variety)
 (100, 203, 'Arun', 'Coimbatore', '2025-04-01', FALSE);
 
-
-
-SELECT customer_id, customer_name, COUNT(*) AS total_rides 
-FROM uber_rides 
-WHERE city = 'Chennai' AND cancelled = FALSE 
-AND ride_date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) 
-GROUP BY customer_id, customer_name 
-HAVING COUNT(*) >= 50; 
-
+SELECT customer_id, customer_name, COUNT(_) AS total_rides
+FROM uber_rides
+WHERE city = 'Chennai' AND cancelled = FALSE
+AND ride_date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH)
+GROUP BY customer_id, customer_name
+HAVING COUNT(_) >= 50;
 
 July 18 2025
-installed MySQL Latest version for ETL  
-
+installed MySQL Latest version for ETL
 
 July 23 2025
-Leard About Spark & Hadoop arcticture 
+Leard About Spark & Hadoop arcticture
 
 July 28 2025
 Learn about Hive & Grandmother expired on this Day
@@ -52,7 +46,7 @@ July 29 2025
 Learn about DDL & went house viewing (Signet)
 
 July 30 2025
-Learn about 
+Learn about
 SQL Hosting
 If you want your web site to be able to store and retrieve data from a database, your web server should have access to a database-system that uses the SQL language.
 
@@ -69,8 +63,6 @@ SQL injection is one of the most common web hacking techniques.
 
 SQL injection is the placement of malicious code in SQL statements, via web page input.
 
-
-
 Aug 01 2025
 
 SQL CREATE VIEW Statement
@@ -80,7 +72,7 @@ A view contains rows and columns, just like a real table. The fields in a view a
 
 You can add SQL statements and functions to a view and present the data as if the data were coming from one single table.
 
-A view is created with the CREATE VIEW statement. 
+A view is created with the CREATE VIEW statement.
 
 CREATE VIEW Syntax
 CREATE VIEW view_name AS
@@ -89,8 +81,7 @@ FROM table_name
 WHERE condition;
 Note: A view always shows up-to-date data! The database engine recreates the view, every time a user queries it.
 
-
-Aug 2 2025SQL 
+Aug 2 2025SQL
 
 Dates
 The most difficult part when working with dates is to be sure that the format of the date you are trying to insert, matches the format of the date column in the database.
@@ -116,33 +107,33 @@ SQL Working with Dates
 Look at the following table:
 
 Orders Table
-OrderId	ProductName	OrderDate
-1	Geitost	2008-11-11
-2	Camembert Pierrot	2008-11-09
-3	Mozzarella di Giovanni	2008-11-11
-4	Mascarpone Fabioli	2008-10-29
+OrderId ProductName OrderDate
+1 Geitost 2008-11-11
+2 Camembert Pierrot 2008-11-09
+3 Mozzarella di Giovanni 2008-11-11
+4 Mascarpone Fabioli 2008-10-29
 Now we want to select the records with an OrderDate of "2008-11-11" from the table above.
 
 We use the following SELECT statement:
 
-SELECT * FROM Orders WHERE OrderDate='2008-11-11'
+SELECT \* FROM Orders WHERE OrderDate='2008-11-11'
 The result-set will look like this:
 
-OrderId	ProductName	OrderDate
-1	Geitost	2008-11-11
-3	Mozzarella di Giovanni	2008-11-11
+OrderId ProductName OrderDate
+1 Geitost 2008-11-11
+3 Mozzarella di Giovanni 2008-11-11
 Note: Two dates can easily be compared if there is no time component involved!
 
 Now, assume that the "Orders" table looks like this (notice the added time-component in the "OrderDate" column):
 
-OrderId	ProductName	OrderDate
-1	Geitost	2008-11-11 13:23:44
-2	Camembert Pierrot	2008-11-09 15:45:21
-3	Mozzarella di Giovanni	2008-11-11 11:12:01
-4	Mascarpone Fabioli	2008-10-29 14:56:59
+OrderId ProductName OrderDate
+1 Geitost 2008-11-11 13:23:44
+2 Camembert Pierrot 2008-11-09 15:45:21
+3 Mozzarella di Giovanni 2008-11-11 11:12:01
+4 Mascarpone Fabioli 2008-10-29 14:56:59
 If we use the same SELECT statement as above:
 
-SELECT * FROM Orders WHERE OrderDate='2008-11-11'
+SELECT \* FROM Orders WHERE OrderDate='2008-11-11'
 we will get no result! This is because the query is looking only for dates with no time portion.
 
 Tip: To keep your queries simple and easy to maintain, do not use time-components in your dates, unless you have to!
@@ -156,11 +147,11 @@ Syntax for MySQL
 The following SQL statement defines the "Personid" column to be an auto-increment primary key field in the "Persons" table:
 
 CREATE TABLE Persons (
-    Personid int NOT NULL AUTO_INCREMENT,
-    LastName varchar(255) NOT NULL,
-    FirstName varchar(255),
-    Age int,
-    PRIMARY KEY (Personid)
+Personid int NOT NULL AUTO_INCREMENT,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Age int,
+PRIMARY KEY (Personid)
 );
 MySQL uses the AUTO_INCREMENT keyword to perform an auto-increment feature.
 
@@ -175,3 +166,80 @@ INSERT INTO Persons (FirstName,LastName)
 VALUES ('Lars','Monsen');
 The SQL statement above would insert a new record into the "Persons" table. The "Personid" column would be assigned a unique value. The "FirstName" column would be set to "Lars" and the "LastName" column would be set to "Monsen".
 
+Aug 6 2025
+
+VPS document
+
+Aug 7 2025
+Ip & Network
+To configure a public IP for your system so you can host your ERP, you’ll need to go through three main steps:
+
+1. Get a public IP from your ISP or hosting provider
+
+2. Configure it on your system
+
+3. Make it accessible from the internet (firewall, router, and DNS setup)
+
+## For Windows
+
+Go to Control Panel → Network and Sharing Center → Change adapter settings
+
+Right-click your network adapter → Properties
+
+Select Internet Protocol Version 4 (TCP/IPv4) → Properties
+
+Set your public IP, subnet mask, default gateway, and DNS manually.
+
+Save and restart networking.
+
+## Make It Accessible
+
+Even if you set a public IP, it won’t be reachable unless you open the right paths.
+
+a. Router/Firewall Port Forwarding
+If your ERP runs on port 8080 or 80/443:
+
+Forward that port from your router to your system’s local IP.
+
+On most routers: Login → Port Forwarding → Add Rule
+
+External Port: 80 (or your ERP port)
+
+Internal IP: Your machine’s LAN IP
+
+Internal Port: Same as ERP port
+
+## On Windows:
+
+Open Windows Defender Firewall → Advanced Settings → Inbound Rules
+
+Add a rule for your ERP port.
+
+## c. Test Accessibility
+
+From an external network (mobile data, not WiFi), open:
+
+http://<YOUR_PUBLIC_IP>:<PORT>
+If you see your ERP login page, it’s working.
+
+## Optional – Use a Domain Name
+
+Instead of typing your public IP, register a domain and point it to your IP using an A record in your DNS settings.
+
+Example:
+
+Domain: myerpcompany.com
+
+A Record → Points to your static public IP.
+
+## Security Note:
+
+ERP systems usually store sensitive data. If you expose it to the public internet:
+
+Always use HTTPS (SSL certificate – can use Let’s Encrypt for free).
+
+Configure strong authentication.
+
+Keep software up to date.
+
+Consider reverse proxying through NGINX for extra protection.
