@@ -243,3 +243,23 @@ Configure strong authentication.
 Keep software up to date.
 
 Consider reverse proxying through NGINX for extra protection.
+
+
+
+Aug 8 2025
+
+Vanilla JavaScript refers to the core JavaScript language without the use of any external libraries or frameworks like jQuery, React, or Vue.js. It represents the fundamental capabilities of JavaScript as a programming language for client-side web development.
+AJAX (Asynchronous JavaScript and XML) is a technique that utilizes JavaScript to make asynchronous requests to a server without requiring a full page reload. It is not a programming language itself but rather a set of web development techniques that combine JavaScript, XML (or other data formats like JSON), and the XMLHttpRequest object (or the more modern Fetch API) to enable dynamic content updates on a webpage.
+The key differences are:
+Nature:
+Vanilla JavaScript is the programming language itself, while AJAX is a technique or method that leverages JavaScript to achieve asynchronous communication with a server.
+Scope:
+Vanilla JavaScript encompasses all aspects of client-side scripting, including DOM manipulation, event handling, and logical operations. AJAX specifically focuses on enabling asynchronous data exchange with a server to update parts of a webpage without full reloads.
+Purpose:
+The purpose of Vanilla JavaScript is to provide the fundamental building blocks for interactive web pages. The purpose of AJAX is to enhance user experience by allowing for partial page updates and reducing server load by only fetching necessary data.
+Implementation:
+AJAX is implemented using JavaScript's built-in features like XMLHttpRequest or the Fetch API to send and receive data from a server. This implementation is done using Vanilla JavaScript or with the help of libraries that simplify AJAX calls.
+
+
+
+
