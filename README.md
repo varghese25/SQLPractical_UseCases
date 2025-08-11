@@ -275,3 +275,11 @@ The Core Ultra 9 185H and Core Ultra 7 165H are examples of high-end and mid-ran
 14th Gen:
 Intel's 14th generation processors, like the Core i9-14900HX, are also available and offer high performance for demanding tasks. 
 
+
+Aug 10 2025
+SQL CREATE INDEX Statement
+The CREATE INDEX statement is used to create indexes in tables.
+
+Indexes are used to retrieve data from the database more quickly than otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.
+
+Note: Updating a table with indexes takes more time than updating a table without (because the indexes also need an update). So, only create indexes on columns that will be frequently searched against.
