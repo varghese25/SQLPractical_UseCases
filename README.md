@@ -283,3 +283,14 @@ The CREATE INDEX statement is used to create indexes in tables.
 Indexes are used to retrieve data from the database more quickly than otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.
 
 Note: Updating a table with indexes takes more time than updating a table without (because the indexes also need an update). So, only create indexes on columns that will be frequently searched against.
+
+
+
+Aug 13 2025
+
+SQL PRIMARY KEY Constraint
+The PRIMARY KEY constraint is used to uniquely identify each record in a table.
+
+Primary keys must contain unique values, and cannot contain NULL values.
+
+Each table can have only ONE primary key. The primary key can be a single column or a combination of columns.
