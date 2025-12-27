@@ -1,3 +1,10 @@
+
+# which of the following sets represent the result- set of table1 full join table2?
+
+-- Answer Table1 U Table2
+
+
+
 # ETL - Extract Transform Load (Unstructured Files like video, PDF , etc)
 
 # ELT - Extract Load Transform (Structured Files)
