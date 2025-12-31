@@ -1,4 +1,11 @@
 
+
+
+
+# SELECT COALESCE(NULL,NULL,NULL,'NULL') FROM DUAL; -- OUTPUT: string'NULL'
+-- Explanation: COALESCE function return first not null value. in this statement,the last value is given in Quotes, hence it will be treated as a string. So Answer is String 'Null'
+
+
 # which of the following sets represent the result- set of table1 full join table2?
 
 -- Answer Table1 U Table2
